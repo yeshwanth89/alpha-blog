@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+div.combDiv {
+    width: 100%;
+    border: 1px solid gray;
+
+position:absolute;
+ height:100%;;
+}
+
+header, footer {
+    padding: 1em;
+    color: white;
+    background-color:  blue;
+    clear: left;
+    text-align: center;
+}
+footer{
+   position:absolute;
+   bottom:0px;
+   width:100%;
+}
+
+nav {
+    float: left;
+    max-width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul a {
+    text-decoration: none;
+}
+
+article {
+    margin-left: 100px;
+    border-left: 1px solid gray;
+    position:absolute;
+    height: 100%;
+    padding: 1em;
+    overflow: hidden;
+}
+</style>
+</head>
+<body>
+
+<div class="combDiv">
+
+<header>
+   <h1>Alpha-Blog</h1>
+</header>
+
+<nav>
+  <ul>
+   <li><%= link_to 'Home' , root_path %></li>
+   <li><%= link_to 'About' , about_path %></li>
+  </ul>
+</nav>
+
+<article>
+  <h1>About</h1>
+  <p>This is a cool project developed by Yesh in ROR</p>
+</article>
+
+<footer>Copyright &copy; Alpha-Team</footer>
+
+</div>
+
+</body>
+</html>
