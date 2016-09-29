@@ -20,7 +20,7 @@ class ArticlesController < ApplicationController
     #render plain: params[:article].inspect
     debugger
     @article = Article.new(article_params)
-    @article.user = User.last
+    @article.user = current_user
     if @article.save
       flash[:success] = "Article is successfully crearted"
       redirect_to article_path(@article)
@@ -63,7 +63,7 @@ class ArticlesController < ApplicationController
       if current_user != @article.user
         flash[:danger] = "You can edit or delete your own article"
         redirect_to root_path
-      
+
     end
 
 
