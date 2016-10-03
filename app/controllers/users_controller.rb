@@ -54,9 +54,9 @@ class UsersController < ApplicationController
 
  private
   def user_params
-    if current_user != @user and !current_user.admin?
+
      params.require(:user).permit(:username, :email, :password)
-    end
+    
   end
 
   def set_user
